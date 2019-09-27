@@ -96,8 +96,8 @@ class Manager extends Employee {
       this.title = "Not a manager",
       this.bonus = 0
     }
-    updater() {
-      super.hire()
+    hire(employee) {
+      super.hire(employee)
       if (this.reports.length === 0) {
         this.title = "Not a manager"
       } else if (this.reports.length >= 1 && this.reports.length <= 3) {
@@ -109,7 +109,7 @@ class Manager extends Employee {
       } else if (this.reports.length >= 51 && this.reports.length <= 100) {
         this.title = "Manager Plus"
       } else if (this.reports.length >= 101) {
-        this.title = "Manager"
+        this.title = "Bestest Manager"
     }
   }
     fire(){
